@@ -16,7 +16,8 @@ public class Note
     public bool ventil1;
     public bool ventil2;
     public bool ventil3;
-    public float lenght;
+    public float duration = 1;
+    public float whenToPlay;
 
     public Note()
     {

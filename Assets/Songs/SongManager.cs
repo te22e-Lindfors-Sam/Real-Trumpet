@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SongManager : MonoBehaviour
@@ -22,39 +23,48 @@ public class SongManager : MonoBehaviour
     [SerializeField] AudioClip G;
 
     List<GameObject> notes;
+
+    int currentNote = 0;
     public Note note;
     bool changedNote;
-    AudioClip currentClip;
+
+    public float score = 0;
+
+    public float timer = -2;
 
     [SerializeField] GameObject noteObjet;
 
     void Start()
     {
-        note = new();
         Application.targetFrameRate = 60;
         notes = new List<GameObject>();
+        note = new();
+        for (int i = 0; i < song.song.Count; i++)
+        {
+            noteObjet.transform.localScale = new Vector3(song.song[i].duration, 1, 1);
+            if (song.song[i].ventil1)
+            {
+                notes.Add(Instantiate(noteObjet, new Vector3(song.song[i].whenToPlay * 60f + 300, line1.position.y, 0), quaternion.identity, canvas.transform));
+            }
+            if (song.song[i].ventil2)
+            {
+                notes.Add(Instantiate(noteObjet, new Vector3(song.song[i].whenToPlay * 60f + 300, line2.position.y, 0), quaternion.identity, canvas.transform));
+            }
+            if (song.song[i].ventil3)
+            {
+                notes.Add(Instantiate(noteObjet, new Vector3(song.song[i].whenToPlay * 60f + 300, line3.position.y, 0), quaternion.identity, canvas.transform));
+            }
+        }
         StartCoroutine("PlaySong");
     }
     IEnumerator PlaySong()
     {
         for (int i = 0; i < song.song.Count; i++)
         {
-            //AudioClip note = DecideNote(song.song[i]);
-            //source.clip = note;
-            //source.Play();
-            if (song.song[i].ventil1)
-            {
-                notes.Add(Instantiate(noteObjet, line1.position, quaternion.identity, canvas.transform));
-            }
-            if (song.song[i].ventil2)
-            {
-                notes.Add(Instantiate(noteObjet, line2.position, quaternion.identity, canvas.transform));
-            }
-            if (song.song[i].ventil3)
-            {
-                notes.Add(Instantiate(noteObjet, line3.position, quaternion.identity, canvas.transform));
-            }
-            yield return new WaitForSeconds(1.0f + song.song[i].lenght);
+            AudioClip note = DecideNote(song.song[i]);
+            source.clip = note;
+            source.Play();
+            yield return new WaitForSeconds(song.song[i].duration);
 
 
         }
@@ -64,16 +74,24 @@ public class SongManager : MonoBehaviour
     {
         for (int i = notes.Count - 1; i >= 0; i--)
         {
-            Debug.Log("itterating");
             if (notes[i].transform.position.x < 0)
             {
-                Debug.Log("HEJ");
                 Destroy(notes[i]);
                 notes.Remove(notes[i]);
                 continue;
             }
             notes[i].transform.position -= new Vector3(1, 0, 0);
         }
+
+        timer += Time.deltaTime;
+
+
+
+
+
+
+
+
 
 
         changedNote = false;
@@ -131,19 +149,56 @@ public class SongManager : MonoBehaviour
         AudioClip noteToPlay = DecideNote();
         if (noteToPlay == null)
         {
-            currentClip = null;
+            note.duration = 0;
             source.Pause();
         }
         if (changedNote)
         {
+            note.whenToPlay = timer;
             source.clip = noteToPlay;
             source.Play();
+        }
+        else
+        {
+            note.duration += Time.deltaTime;
         }
 
 
     }
 
     AudioClip DecideNote()
+    {
+        if (!note.ventil1 && note.ventil2 && note.ventil3)//A
+        {
+            return A;
+        }
+        else if (!note.ventil1 && note.ventil2 && !note.ventil3)//B
+        {
+            return B;
+        }
+        else if (note.ventil1 && note.ventil2 && note.ventil3)//C
+        {
+            return C;
+        }
+        else if (note.ventil1 && !note.ventil2 && note.ventil3)//D
+        {
+            return D;
+        }
+        else if (note.ventil1 && note.ventil2 && !note.ventil3)//E
+        {
+            return E;
+        }
+        else if (note.ventil1 && !note.ventil2 && !note.ventil3)//F
+        {
+            return F;
+        }
+        else if (!note.ventil1 && !note.ventil2 && note.ventil3)//G
+        {
+            return G;
+        }
+        return null;
+    }
+    AudioClip DecideNote(Note note)
     {
         if (!note.ventil1 && note.ventil2 && note.ventil3)//A
         {

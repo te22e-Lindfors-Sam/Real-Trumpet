@@ -17,68 +17,85 @@ MonoBehaviour:
   - ventil1: 1
     ventil2: 1
     ventil3: 0
-    lenght: 0
+    duration: 2
+    whenToPlay: 0
   - ventil1: 1
     ventil2: 0
     ventil3: 1
-    lenght: 0
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: 1
+    duration: 2
+    whenToPlay: 2
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 2
+    whenToPlay: 4
   - ventil1: 1
     ventil2: 1
     ventil3: 0
-    lenght: 0
+    duration: 2
+    whenToPlay: 6
   - ventil1: 1
     ventil2: 0
     ventil3: 1
-    lenght: 0
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: 1
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: -0.5
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: -0.5
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: -0.5
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: -0.5
+    duration: 2
+    whenToPlay: 8
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 2
+    whenToPlay: 10
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 1
+    whenToPlay: 12
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 1
+    whenToPlay: 13
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 1
+    whenToPlay: 14
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 1
+    whenToPlay: 15
   - ventil1: 1
     ventil2: 0
     ventil3: 1
-    lenght: -0.5
+    duration: 1
+    whenToPlay: 16
   - ventil1: 1
     ventil2: 0
     ventil3: 1
-    lenght: -0.5
-  - ventil1: 1
-    ventil2: 0
-    ventil3: 0
-    lenght: -0.5
+    duration: 1
+    whenToPlay: 17
   - ventil1: 1
     ventil2: 0
     ventil3: 1
-    lenght: -0.5
+    duration: 1
+    whenToPlay: 18
+  - ventil1: 1
+    ventil2: 0
+    ventil3: 1
+    duration: 1
+    whenToPlay: 19
   - ventil1: 1
     ventil2: 1
     ventil3: 0
-    lenght: 0
+    duration: 2
+    whenToPlay: 20
   - ventil1: 1
     ventil2: 0
     ventil3: 1
-    lenght: 0
-  - ventil1: 0
-    ventil2: 0
-    ventil3: 0
-    lenght: 1
+    duration: 2
+    whenToPlay: 22
+  - ventil1: 1
+    ventil2: 1
+    ventil3: 1
+    duration: 2
+    whenToPlay: 24

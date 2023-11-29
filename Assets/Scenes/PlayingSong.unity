@@ -218,7 +218,7 @@ RectTransform:
   m_GameObject: {fileID: 334409781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4.8197474}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 585629519}
@@ -550,7 +550,7 @@ RectTransform:
   m_GameObject: {fileID: 983348789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1544934988}
@@ -988,7 +988,15 @@ MonoBehaviour:
   E: {fileID: 8300000, guid: f1db2cfa9901aa6458c12c28156b8119, type: 3}
   F: {fileID: 8300000, guid: 686789454ed62d04a85e852c0e985b09, type: 3}
   G: {fileID: 8300000, guid: fc668d818643ea247a03f5bb4f07c60b, type: 3}
-  note: {fileID: 6999854237108208572, guid: f0465da49121fdd4181460deb69f4560, type: 3}
+  note:
+    ventil1: 0
+    ventil2: 0
+    ventil3: 0
+    duration: 0
+    whenToPlay: 0
+  score: 0
+  timer: -2
+  noteObjet: {fileID: 8213914648834694746, guid: 5255b9645fa8ea14f82f10bd3e3a4bc4, type: 3}
 --- !u!1 &1544934987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1163,7 @@ RectTransform:
   m_GameObject: {fileID: 1808505018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 884582121}

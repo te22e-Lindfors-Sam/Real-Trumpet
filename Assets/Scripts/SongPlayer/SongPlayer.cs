@@ -28,7 +28,7 @@ public class SongPlayer : MonoBehaviour
             AudioClip note = DecideNote(song.song[i]);
             source.clip = note;
             source.Play();
-            yield return new WaitForSeconds(1.0f + song.song[i].lenght);
+            yield return new WaitForSeconds(song.song[i].duration);
         }
     }
 
@@ -42,7 +42,7 @@ public class SongPlayer : MonoBehaviour
         {
             return B;
         }
-        else if (!note.ventil1 && !note.ventil2 && !note.ventil3)//C
+        else if (note.ventil1 && note.ventil2 && note.ventil3)//C
         {
             return C;
         }
