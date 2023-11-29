@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Trumpet : MonoBehaviour
 {
     [SerializeField] AudioClip A;
     [SerializeField] AudioClip B;
@@ -20,10 +20,10 @@ public class Player : MonoBehaviour
     AudioSource source;
     Ventil ven1;
     Ventil ven2;
-    Ventil ven3;
-    Image ven1Image;
-    Image ven2Image;
-    Image ven3Image;
+    Ventil ven3; 
+    SpriteRenderer ven1Image;
+    SpriteRenderer ven2Image;
+    SpriteRenderer ven3Image;
 
     Note note;
     bool changedNote = false;
@@ -33,13 +33,13 @@ public class Player : MonoBehaviour
         source = GetComponent<AudioSource>();
 
         ven1 = Input1.GetComponent<Ventil>();
-        ven1Image = Input1.GetComponent<Image>();
+        ven1Image = Input1.GetComponent<SpriteRenderer>();
 
         ven2 = Input2.GetComponent<Ventil>();
-        ven2Image = Input2.GetComponent<Image>();
+        ven2Image = Input2.GetComponent<SpriteRenderer>();
 
         ven3 = Input3.GetComponent<Ventil>();
-        ven3Image = Input3.GetComponent<Image>();
+        ven3Image = Input3.GetComponent<SpriteRenderer>();
 
         note = new();
     }

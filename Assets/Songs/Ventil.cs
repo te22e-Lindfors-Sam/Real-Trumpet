@@ -36,7 +36,6 @@ public class Ventil : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         colliding = false;
-        Debug.Log(time + " " + pressedTime);
         if (time == pressedTime)
         {
             songManager.score += 30;
