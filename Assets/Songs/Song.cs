@@ -16,6 +16,11 @@ public class Note
     public bool ventil1;
     public bool ventil2;
     public bool ventil3;
+
+    public bool low;
+    public bool heigh;
+    public bool hastag;
+
     public float duration = 1;
 
     public Note()

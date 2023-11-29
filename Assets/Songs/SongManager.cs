@@ -15,13 +15,15 @@ public class SongManager : MonoBehaviour
     [SerializeField] Transform line3;
 
     [SerializeField] TextMeshProUGUI scoreShower;
+    [SerializeField] TextMeshProUGUI finalScore;
+    [SerializeField] GameObject done;
 
 
     List<GameObject> notes;
     public float score = 0;
 
-    float songDuration = 5;
-    float timer = 0;
+    public float songDuration = 10;
+    public float timer = 0;
 
 
 
@@ -70,6 +72,8 @@ public class SongManager : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > songDuration)
         {
+            done.SetActive(true);
+            finalScore.text = score.ToString();
             Time.timeScale = 0;
         }
 
