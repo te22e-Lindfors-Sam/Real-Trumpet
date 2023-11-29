@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d05f7fe13a67c04c93f40a84f3137ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08d9ac7c61a72714687b460f18082318, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3c30748e577c94aab2d98e9748acff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song: {fileID: 11400000, guid: 921e5d0ef378d564b8dda464ea2a6bd3, type: 2}
+  song: {fileID: 11400000, guid: e9adfee1d2914f5419df6cd746a95ebd, type: 2}
   vault1Line: {fileID: 711061432}
   vault2Line: {fileID: 1003184999}
   vault3Line: {fileID: 578697860}
