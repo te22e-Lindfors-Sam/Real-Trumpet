@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 08d9ac7c61a72714687b460f18082318, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b60164364ddf26d46bbbe2a67fae4725, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 370914264}
   - component: {fileID: 370914263}
   - component: {fileID: 370914262}
+  - component: {fileID: 370914265}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -435,7 +436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 370914263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 370914265}
+        m_TargetAssemblyTypeName: changeScene, Assembly-CSharp
+        m_MethodName: changeScenes
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Start
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &370914263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +487,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370914260}
   m_CullTransparentMesh: 1
+--- !u!114 &370914265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370914260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cd7e8bd2b1e7d4cb0640a22acc7d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371663608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,7 +1590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3c30748e577c94aab2d98e9748acff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song: {fileID: 11400000, guid: e9adfee1d2914f5419df6cd746a95ebd, type: 2}
+  song: {fileID: 11400000, guid: 00a438e3b7b35964cb56b61902f4fc44, type: 2}
   vault1Line: {fileID: 711061432}
   vault2Line: {fileID: 1003184999}
   vault3Line: {fileID: 578697860}

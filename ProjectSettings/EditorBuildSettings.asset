@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: b020f324953b04d4eb4159093bbfaa6c
   - enabled: 1
-    path: Assets/Scenes/PlayingSong.unity
-    guid: d2b976c7994634945a0abda37835d562
-  - enabled: 1
     path: Assets/Scenes/SongSelection.unity
     guid: 72e7dd20f69b6af48910746efd4de78d
+  - enabled: 1
+    path: "Assets/Scenes/SongS/Bj\xF6rnenSover.unity"
+    guid: 12e16c427cef49442a7cece9e8739419
+  - enabled: 1
+    path: "Assets/Scenes/SongS/BlinklaLilaSj\xE4rna.unity"
+    guid: 6d6e5d6c79884e648a1dddc6f92c6211
+  - enabled: 1
+    path: Assets/Scenes/SongS/JingleBells.unity
+    guid: 425d9e69af0db564e8ebb9583995435b
+  - enabled: 1
+    path: "Assets/Scenes/SongS/K\xF6pVarmKorv.unity"
+    guid: 47de14fc0c45939468e505669e6c2dcb
+  - enabled: 1
+    path: Assets/Scenes/SongS/LileKatt.unity
+    guid: dc31029b63853c348a9e6d16ac277c89
   m_configObjects: {}
