@@ -35,6 +35,7 @@ public class Ventil : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        Debug.Log("ecit");
         colliding = false;
         if (time == pressedTime)
         {
